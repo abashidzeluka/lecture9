@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Assignment
 {
@@ -46,7 +44,7 @@ namespace Assignment
             {
                 if (string.IsNullOrEmpty(value))
                 {
-                    Console.WriteLine("Name cannot be empty.");
+                    Console.WriteLine("Surname cannot be empty.");
                     return;
                 }
                 _surname = value;
@@ -79,18 +77,7 @@ namespace Assignment
         public int GetAge()
         {
              return DateTime.Now.Year - DateOfBirth.Year;
-        }
-
-        public static void FilterByCountry(Employee[] employee, Country country)
-        {
-            foreach (var item in employee)
-            {
-                if(item.Country == country)
-                {
-                    Console.WriteLine(item.ToString());
-                }
-            }
-        }
+        }       
 
         public override string? ToString()
         {

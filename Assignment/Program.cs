@@ -15,8 +15,21 @@
             employees[6] = new Employee("George", "Beridze", new DateTime(1993, 6, 12), Country.Georgia, Gender.Male, Contacts.Email, "george.Beridze@hotmail.com");
             employees[7] = new Employee("Elena", "Ruiz", new DateTime(1991, 2, 27), Country.Spain, Gender.Female, Contacts.Email, "elena.ruiz@gmail.com");
 
-            Employee.FilterByCountry(employees, Country.Georgia);
+            FilterByCountry(employees, Country.Georgia);
 
+
+
+        }
+
+        static void FilterByCountry(Employee[] employee, Country country)
+        {
+            foreach (var item in employee)
+            {
+                if (item.Country == country)
+                {
+                    Console.WriteLine(item.ToString());
+                }
+            }
         }
     }
 }
